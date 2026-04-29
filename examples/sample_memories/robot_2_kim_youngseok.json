@@ -1,0 +1,145 @@
+{
+  "robot_id": "samon_002",
+  "patient_id": "kim_youngseok",
+  "memory_format_version": "rosa_layer4_v1",
+  "generated_at": "2026-04-29T16:58:17.301578+00:00",
+  "key_value_summary": {
+    "demographics.name": "김영석",
+    "demographics.age": "78",
+    "medical.diagnoses": "heart_failure, type2_diabetes, depression, BPH, insomnia",
+    "medical.medications": "furosemide, spironolactone, metformin, sertraline, tamsulosin, zolpidem, aspirin",
+    "preferences.favorite_song": "최희준 - 하숙생 (1966)",
+    "preferences.favorite_content": "가요무대·바둑 중계",
+    "biography.key_history": "은행원 35년, 2018년 은퇴, 2022년 심부전 진단",
+    "scenario.assigned": "A - 다약제(polypharmacy) 사후 모니터링"
+  },
+  "full_memory": {
+    "patient_id": "kim_youngseok",
+    "short_term": {
+      "session_id": "sess_kim_youngseok_init",
+      "patient_id": "kim_youngseok",
+      "started_at": "2026-04-29T16:58:17.278509Z",
+      "recent_utterances": [],
+      "current_mode": "idle",
+      "current_goal": null,
+      "triage_history": [],
+      "recent_vitals_30min": []
+    },
+    "recent_episodes": [
+      {
+        "memory_id": "kim_youngseok_ep_baseline",
+        "patient_id": "kim_youngseok",
+        "created_at": "2026-04-29T16:58:17.278589Z",
+        "source": "emr",
+        "retention_until": "2031-04-28T16:58:17.278590Z",
+        "event_type": "baseline_assessment",
+        "timestamp": "2026-03-30T16:58:17.278509Z",
+        "location": "외래",
+        "symptom_category": "general",
+        "severity": "low",
+        "description": "김영석 첫 등록 평가, 진단 heart_failure",
+        "action_taken": "enrollment",
+        "outcome": "완료"
+      }
+    ],
+    "semantic_facts": {
+      "demographics.name": {
+        "memory_id": "kim_youngseok_sem_name",
+        "patient_id": "kim_youngseok",
+        "created_at": "2026-04-29T16:58:17.278522Z",
+        "source": "emr",
+        "retention_until": "2031-04-28T16:58:17.278523Z",
+        "fact_key": "demographics.name",
+        "fact_value": "김영석",
+        "confidence": 1.0
+      },
+      "demographics.age": {
+        "memory_id": "kim_youngseok_sem_age",
+        "patient_id": "kim_youngseok",
+        "created_at": "2026-04-29T16:58:17.278537Z",
+        "source": "emr",
+        "retention_until": "2031-04-28T16:58:17.278538Z",
+        "fact_key": "demographics.age",
+        "fact_value": "78",
+        "confidence": 1.0
+      },
+      "medical.diagnoses": {
+        "memory_id": "kim_youngseok_sem_dx",
+        "patient_id": "kim_youngseok",
+        "created_at": "2026-04-29T16:58:17.278545Z",
+        "source": "emr",
+        "retention_until": "2031-04-28T16:58:17.278546Z",
+        "fact_key": "medical.diagnoses",
+        "fact_value": "heart_failure, type2_diabetes, depression, BPH, insomnia",
+        "confidence": 1.0
+      },
+      "medical.medications": {
+        "memory_id": "kim_youngseok_sem_meds",
+        "patient_id": "kim_youngseok",
+        "created_at": "2026-04-29T16:58:17.278551Z",
+        "source": "emr",
+        "retention_until": "2031-04-28T16:58:17.278552Z",
+        "fact_key": "medical.medications",
+        "fact_value": "furosemide, spironolactone, metformin, sertraline, tamsulosin, zolpidem, aspirin",
+        "confidence": 1.0
+      },
+      "preferences.favorite_song": {
+        "memory_id": "kim_youngseok_sem_song",
+        "patient_id": "kim_youngseok",
+        "created_at": "2026-04-29T16:58:17.278557Z",
+        "source": "self_report",
+        "retention_until": "2031-04-28T16:58:17.278558Z",
+        "fact_key": "preferences.favorite_song",
+        "fact_value": "최희준 - 하숙생 (1966)",
+        "confidence": 1.0
+      },
+      "preferences.favorite_content": {
+        "memory_id": "kim_youngseok_sem_content",
+        "patient_id": "kim_youngseok",
+        "created_at": "2026-04-29T16:58:17.278562Z",
+        "source": "self_report",
+        "retention_until": "2031-04-28T16:58:17.278563Z",
+        "fact_key": "preferences.favorite_content",
+        "fact_value": "가요무대·바둑 중계",
+        "confidence": 1.0
+      },
+      "biography.key_history": {
+        "memory_id": "kim_youngseok_sem_bio",
+        "patient_id": "kim_youngseok",
+        "created_at": "2026-04-29T16:58:17.278566Z",
+        "source": "family",
+        "retention_until": "2031-04-28T16:58:17.278567Z",
+        "fact_key": "biography.key_history",
+        "fact_value": "은행원 35년, 2018년 은퇴, 2022년 심부전 진단",
+        "confidence": 1.0
+      },
+      "scenario.assigned": {
+        "memory_id": "kim_youngseok_sem_scenario",
+        "patient_id": "kim_youngseok",
+        "created_at": "2026-04-29T16:58:17.278571Z",
+        "source": "self_report",
+        "retention_until": "2031-04-28T16:58:17.278576Z",
+        "fact_key": "scenario.assigned",
+        "fact_value": "A - 다약제(polypharmacy) 사후 모니터링",
+        "confidence": 1.0
+      }
+    },
+    "procedural_patterns": [
+      {
+        "memory_id": "kim_youngseok_proc_polypharm",
+        "patient_id": "kim_youngseok",
+        "created_at": "2026-04-29T16:58:17.278630Z",
+        "source": "emr",
+        "retention_until": "2031-04-28T16:58:17.278632Z",
+        "pattern_name": "polypharmacy_evening_risk_window",
+        "trigger_condition": {
+          "time_window": "19:00-21:00",
+          "med_count": 7
+        },
+        "typical_response": "post_med_30min_monitoring",
+        "observed_count": 8,
+        "last_seen": "2026-04-29T16:58:17.278637Z"
+      }
+    ]
+  }
+}
