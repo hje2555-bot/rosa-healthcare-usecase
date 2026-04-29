@@ -1,13 +1,15 @@
 # Samon Care Robot
 
-> **Upstage × SeSAC AI Service Development (Plan → Implementation) Project — Corporate Collaboration Mission with LG Electronics.**
-> Extending NASA-JPL ROSA's 5-layer agentic architecture onto the LG CLOi platform as a home care use case.
+> *Personal domain-extension exploration. Concept proposal, not an official deliverable.*
+> Extending NASA-JPL ROSA's 5-layer agentic architecture as a home care use case targeting CLOi-class service robot platforms.
 > *Cognitive stimulation by day, polypharmacy safety monitoring by night.*
 
-**Program**: Upstage × SeSAC AI Service Development Project (end-to-end planning to implementation)
-**Corporate Partner / Mission Owner**: LG Electronics
-**Domain Lead**: Jieun Hwang — RN, MS in Integrative Medicine
-**Built on**: [nasa-jpl/rosa](https://github.com/nasa-jpl/rosa) + LG CLOi platform + Upstage Solar LLM
+## ⚠ Disclaimer
+
+This repository is a **personal domain-extension exploration** by the author during participation in an AI service development program. It is **not an official deliverable**, **not endorsed or sponsored** by any company, and any references to specific commercial platforms or LLMs represent **technical compatibility scenarios, not business commitments**. All roadmap timelines, market projections, and channel claims are **hypothetical scenarios**, not real partnership terms.
+
+**Author**: Jieun Hwang — RN, MS in Integrative Medicine
+**Built on**: [nasa-jpl/rosa](https://github.com/nasa-jpl/rosa) (Apache 2.0)
 **Upstream contribution**: [nasa-jpl/rosa#82](https://github.com/nasa-jpl/rosa/pull/82)
 
 ---
@@ -16,16 +18,16 @@
 
 | Partner | Asset | Use in this project |
 |---------|-------|----------------------|
-| **LG Electronics** | CLOi service robots (validated autonomous navigation + HRI), ThinQ Care vision, global home appliance channels | Hardware platform + manufacturing + distribution |
+| **Hardware reference platform** | CLOi-class service robot (validated autonomous navigation + HRI service-robot platform) | Hardware compatibility hypothesis (no actual partnership) |
 | **Upstage** | Solar LLM (best-in-class Korean, medical-domain fine-tunable), Document AI | Reasoning + memory RAG backend |
 | **SeSAC** | Korean youth talent pool, prototyping infrastructure | Build + integration |
-| **Domain Expertise** | 8 yrs clinical (ER, ICU, outpatient, CRM) + 5 yrs public health + 5 yrs 1:1 VIP nursing (Cha-Eum) + MS Integrative Medicine | Home care scenarios, clinical guardrails, content curation |
+| **Domain Expertise** | 8 yrs clinical (ER, ICU, outpatient, CRM) + 5 yrs public health + 5 yrs 1:1 VIP nursing at a premium membership clinic + MS Integrative Medicine | Home care scenarios, clinical guardrails, content curation |
 
-This is **not a startup pitch** — it is a use case ready to enter LG CLOi's next product lineup as a Home Care track.
+This is **not a startup pitch and not a partnership proposal** — it is a personal exploration of a CLOi-class service robot platform applied to the home care domain.
 
 ## 2. What We Built
 
-A **two-mode single robot** running on LG CLOi hardware.
+A **two-mode single-robot concept** designed to run on a CLOi-class service robot platform.
 
 | Mode | Time of Day | Function |
 |------|-------------|----------|
@@ -33,21 +35,21 @@ A **two-mode single robot** running on LG CLOi hardware.
 | Polypharmacy Safety Monitoring Mode | Evening (18:00 — 22:00) | 30-minute post-medication monitoring of facial expression, voice, and heart rate; automatic adverse-event detection |
 
 *"Samon (三溫)"* = **three warmths**: warmth of the body (medication safety) + warmth of the mind (cognitive intervention) + warmth of family (connection).
-A working project codename; LG retains naming rights for commercialization.
+A working project codename; any commercial branding belongs to a future hardware partner if one is established.
 
 ## 3. Why Now — Three Forces Aligned
 
 ### Policy: Korea's Integrated Care Act (effective March 20, 2026)
-KRW 13 trillion budget. 200 home medical care centers in Phase 1, expanding to 600 by 2027. Policy intent: *"keep medical and care services unbroken outside the hospital"* — the first regulatory window for LG CLOi to enter Korean homes at scale.
+KRW 13 trillion budget. 200 home medical care centers in Phase 1, expanding to 600 by 2027. Policy intent: *"keep medical and care services unbroken outside the hospital"* — the first regulatory window for service robots to enter Korean homes at scale.
 
-### Technology: ROSA + LG CLOi + Upstage Solar
+### Technology: ROSA + CLOi-class service robot platform + Upstage Solar
 - ROSA's 5-layer agentic architecture (perception · planning · skill · memory · self-reflection) was originally designed for *turtle coordinates* but maps directly onto *patient clinical data + robot sensors and motors*.
-- LG CLOi's autonomous navigation and HRI, validated in hospitality and service domains, transfers to the home environment as a first product.
+- CLOi-class service-robot autonomous navigation and HRI, validated in hospitality and service domains, can be hypothetically transferred to the home environment.
 - Upstage Solar is the most accurate Korean-language LLM for elderly speech and patient self-reports, with data sovereignty advantages over foreign models.
 
 ### Market: 9.5M elderly, 4.8M with arthritis, 230K ER visits from drug adverse events
 - TAM: KRW 5.7T (9.5M elderly × KRW 50K/month)
-- B2C + B2B (long-term care facilities, home medical care centers) + Global (LG's Japan, Southeast Asia, Middle East channels)
+- B2C + B2B (long-term care facilities, home medical care centers) + Global (hypothetical Japan, Southeast Asia, Middle East distribution channels)
 
 ## 4. Why It Fits Elderly with Arthritis and Mobility Limitations
 
@@ -62,11 +64,11 @@ Five concrete fits:
 
 ## 5. ROSA 5-Layer → Samon Care Robot Mapping
 
-| Layer | ROSA Original (TurtleSim) | Samon Adaptation (on LG CLOi) |
+| Layer | ROSA Original (TurtleSim) | Samon Adaptation (on CLOi-class platform) |
 |-------|---------------------------|--------------------------------|
-| 1. Multi-modal Perception | Turtle coordinates and obstacles | LG CLOi camera, microphone array, LiDAR, touch + external wearables (6 channels) |
+| 1. Multi-modal Perception | Turtle coordinates and obstacles | service robot camera, microphone array, LiDAR, touch + external wearables (6 channels) |
 | 2. Goal-to-Plan Translation | "Draw a star" → coordinate sequence | Upstage Solar maps *time-of-day + voice intent + patient state* → cognitive / polypharmacy / emergency branch |
-| 3. Plan-to-Skill Mapping | move/turn API | LG CLOi motors, display, speaker + notification + drug database + EMR API |
+| 3. Plan-to-Skill Mapping | move/turn API | service robot motors, display, speaker + notification + drug database + EMR API |
 | 4. Memory & Context | Prior shapes remembered | Per-patient medications, family contacts, preferred music, cognitive intervention patterns persisted long-term |
 | 5. Self-reflection Learning | Compress failed shapes | Content efficacy learning + alert threshold auto-tuning (RN/MD review before deployment) |
 
@@ -80,17 +82,17 @@ Detailed mapping: [docs/01-architecture-mapping.md](docs/01-architecture-mapping
 | ElliQ | Israel/USA | Voice-based elderly companion | No clinical monitoring |
 | Buddy | France | Home companion robot | No medical-domain guardrails |
 | Robear | Japan | Hospital lifting assistant | Not designed for home use |
-| **Samon (LG CLOi)** | **Korea** | **Clinical monitoring + Korean-content CST** | — |
+| **Samon (CLOi-class platform)** | **Korea** | **Clinical monitoring + Korean-content CST** | — |
 
 Differentiator: *Foreign home robots stop at emotional support; domestic products stop at simple reminders. Samon is the first category combining clinical monitoring with K-content cognitive intervention.*
 
-## 7. 3-Phase Roadmap (Aligned with LG CLOi Lineup)
+## 7. 3-Phase Hypothetical Roadmap
 
 | Phase | Period | Deliverable | Track |
 |-------|--------|-------------|-------|
-| **Phase 0** | 2026 Q3 (3 months) | **Cognitive intervention module standalone launch + extended-collaboration kickoff** | SeSAC × Upstage × LG joint |
-| **Phase 1** | 2026 Q4 — 2027 Q2 | **LG CLOi for Home Care beta** | LG internal validation + 50-household pilot, KFDA SaMD Class 2 |
-| **Phase 2** | 2027 Q3 + | **Volume production + LG global launch** | LG global channels (Japan, Southeast Asia, Middle East) |
+| **Phase 0** | 2026 Q3 (3 months) | **Cognitive intervention module standalone launch + extended collaboration kickoff (hypothetical)** | Personal exploration |
+| **Phase 1** | 2026 Q4 — 2027 Q2 | **CLOi-class platform Home Care beta (hypothetical)** | Hardware partner internal validation + 50-household pilot, KFDA SaMD Class 2 |
+| **Phase 2** | 2027 Q3 + | **Volume production + global launch (hypothetical)** | Global home appliance channels (Japan, Southeast Asia, Middle East) |
 
 ## 8. Three Real-World Scenarios
 
@@ -116,16 +118,11 @@ Detailed regulatory review: [docs/05](docs/05-regulatory-considerations.md)
 
 - License: **Apache 2.0** — same as NASA-JPL ROSA
 - Built on: [nasa-jpl/rosa](https://github.com/nasa-jpl/rosa) by Jet Propulsion Laboratory, NASA
-- Hardware partner: **LG Electronics CLOi**
+- Hardware reference platform: **CLOi-class service robot**
 - LLM partner: **Upstage Solar**
 - Program: **Upstage × SeSAC AI Service Development Project — Corporate Collaboration Mission with LG Electronics (2026)**
 - Upstream PR: [nasa-jpl/rosa#82](https://github.com/nasa-jpl/rosa/pull/82)
 
 ## 11. Contact
 
-- GitHub: [@hje2555-bot](https://github.com/hje2555-bot)
-- Email: hje2555@gmail.com
-
----
-
-*"What clinicians do not see at the bedside, AI sees even less. Domain comes first; the model follows. Hardware is the bridge."*
+- GitHub: [@hje2555-bot

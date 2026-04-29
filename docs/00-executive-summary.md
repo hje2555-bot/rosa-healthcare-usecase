@@ -1,14 +1,15 @@
 # 삼온 케어 로봇 — Executive Summary
 
 > **Upstage × SeSAC AI 서비스 개발 (기획 → 구현) 프로젝트 — 기업 협업 과제 (LG전자)**
-> NASA-JPL ROSA의 5계층 에이전틱 아키텍처를 LG CLOi 플랫폼 위에 얹어 *가정 돌봄* 도메인으로 확장한 use case.
+> NASA-JPL ROSA의 5계층 에이전틱 아키텍처를 CLOi-class service robot platform 위에 얹어 *가정 돌봄* 도메인으로 확장한 use case.
 
 **Domain Lead**: 황지은 (RN, MS Integrative Medicine)
-**One-liner**: LG CLOi for Home Care — 낮에는 인지중재, 밤에는 다약제(polypharmacy) 안전 모니터링.
+**One-liner**: 가정 돌봄 use case 개념 탐구 — 낮에는 인지중재, 밤에는 다약제(polypharmacy) 안전 모니터링.
+**Status**: 개인 학습 탐구 (any company endorsement 없음).
 
 ## 0. 원본 미션과의 연결
 
-LG전자 현직자가 준 원본 미션은 *"가구 공장 로봇 3대에 각각 다른 가상 기억을 JSON으로 만들어 이식하라"* (5단계 워크플로우: 요소 요청 → 가상 기억 생성 → JSON → key-value → 3대 로봇 메모리). 본 팀은 같은 워크플로우를 **임상 가치가 훨씬 큰 가정 돌봄 도메인** 에 적용했다.
+본 과제의 출발점은 *"메모리가 손실된 자동화 공장 로봇들에 각각 다른 가상 기억을 JSON으로 만들어 이식하는 시나리오"* 였다 (학습 단계 표준 워크플로우, 출처 비공개). 같은 5단계 메모리 생성 워크플로우(요소 요청 → 가상 기억 생성 → JSON → key-value → N대 로봇 메모리)를 **임상 가치가 큰 가정 돌봄 도메인** 에 적용한 것이 본 healthcare 확장 탐구이다.
 
 같은 메모리 생성 워크플로우, 더 임팩트 있는 시장(어르신 950만, 통합돌봄법). 산출물은 ROSA Layer 4 메모리 스키마와 1:1 매핑되는 3개의 JSON 파일 (`robot_1_park_sunja.json`, `robot_2_kim_youngseok.json`, `robot_3_lee_jeongja.json`).
 
@@ -23,9 +24,9 @@ LG전자 현직자가 준 원본 미션은 *"가구 공장 로봇 3대에 각각
 | **LG전자** | CLOi 자율주행·HRI, ThinQ 가전 채널 | 하드웨어 플랫폼 + 양산·유통 |
 | **Upstage** | Solar LLM (한국어·의료 fine-tune 가능) | 추론·메모리 RAG 엔진 |
 | **SeSAC** | 청년 인재 풀, 프로토타입 인프라 | 빌드 + 통합 |
-| **Domain Lead** | 임상 8년·공공보건 5년·차움 1:1 간호 5년·통합의학 석사 | 시나리오·임상 가드레일·콘텐츠 큐레이션 |
+| **Domain Lead** | 임상 8년·공공보건 5년·프리미엄 회원제 1:1 전담간호 5년·통합의학 석사 | 시나리오·임상 가드레일·콘텐츠 큐레이션 |
 
-본 산출물은 *startup pitch*가 아니라 **LG CLOi 신제품 라인업의 가정 돌봄 트랙으로 직접 진입 가능한 use case**.
+본 산출물은 *startup pitch*가 아니라 **CLOi급 서비스 로봇 플랫폼의 가정 돌봄 시나리오 (가설)으로 직접 진입 가능한 use case**.
 
 ## 2. 누가 가장 절실한가 — 고령사회 + 관절염 + 다약제
 
@@ -48,11 +49,11 @@ LG전자 현직자가 준 원본 미션은 *"가구 공장 로봇 3대에 각각
 
 ## 4. ROSA 5-Layer → 삼온 케어 로봇
 
-| Layer | ROSA 원형 | 삼온 적용 (LG CLOi 기반) |
+| Layer | ROSA 원형 | 삼온 적용 (service robot platform 기반) |
 |-------|-----------|--------------------------|
-| 1. 인식 | 터틀 좌표·장애물 | LG CLOi 카메라·마이크·LiDAR·터치 + 외부 웨어러블 6채널 |
+| 1. 인식 | 터틀 좌표·장애물 | service robot 카메라·마이크·LiDAR·터치 + 외부 웨어러블 6채널 |
 | 2. 계획 | "별 그려줘" → 좌표 | Upstage Solar로 시간대+음성+상태 → 인지중재/다약제/응급 분기 |
-| 3. 스킬 | move/turn API | LG CLOi 모터·디스플레이·스피커 + 알림 + 약물DB·EMR |
+| 3. 스킬 | move/turn API | service robot 모터·디스플레이·스피커 + 알림 + 약물DB·EMR |
 | 4. 메모리 | 이전 도형 기억 | 환자별 약물·가족·선호 음악·인지중재 패턴 장기보존 |
 | 5. 자기반성 | 실패 도형 압축 | 콘텐츠 효과 학습 + 알림 임계값 자동 조정 (RN/MD 검토 후 적용) |
 
@@ -66,15 +67,15 @@ LG전자 현직자가 준 원본 미션은 *"가구 공장 로봇 3대에 각각
 
 ## 6. 시장 차별화 — 비어 있는 카테고리
 
-해외(Paro·ElliQ·Buddy·Robear)는 *정서 지원*에 멈췄고, 국내(약 알림기·치매안심센터)는 *단순 알림*에 멈췄다. **LG CLOi가 임상 모니터링 + K-콘텐츠 인지중재를 결합한 첫 카테고리를 연다.**
+해외(Paro·ElliQ·Buddy·Robear)는 *정서 지원*에 멈췄고, 국내(약 알림기·치매안심센터)는 *단순 알림*에 멈췄다. **CLOi급 서비스 로봇이 임상 모니터링 + K-콘텐츠 인지중재를 결합한 첫 카테고리를 연다.**
 
 ## 7. 3-Phase 로드맵
 
 | Phase | 기간 | 핵심 |
 |-------|------|------|
 | 0 | 2026 Q3 (3개월) | 인지중재 모듈 단독 출시 + 다약제·응급 확장 협업 시작 |
-| 1 | 2026 Q4 ~ 2027 Q2 | LG CLOi for Home Care 베타 — LG 사내 검증 + 50가구 파일럿, SaMD Class 2 |
-| 2 | 2027 Q3 ~ | 양산 + LG 글로벌 출시 — 요양원·재택의료센터 B2B + B2C 가전 채널 + 일본·동남아·중동 |
+| 1 | 2026 Q4 ~ 2027 Q2 | Home Care concept on a CLOi-class robotic platform 베타 — 하드웨어 파트너 사내 검증 + 50가구 파일럿 (가설), SaMD Class 2 |
+| 2 | 2027 Q3 ~ | 양산 + 글로벌 출시 (하드웨어 파트너 채택 가정) — 요양원·재택의료센터 B2B + B2C 가전 채널 + 일본·동남아·중동 |
 
 ## 8. 시장 규모
 
@@ -82,7 +83,7 @@ LG전자 현직자가 준 원본 미션은 *"가구 공장 로봇 3대에 각각
 |---|------|------|
 | TAM | 한국 65세+ 950만 × 월 5만 원 | 5.7조 원 |
 | SAM | 다약제 5종+ + MCI/치매 380만 | 2.3조 원 |
-| 첫 SOM | LG 가전 채널 1% + 요양원 5% | LG 내부 산정 |
+| 첫 SOM | 가전 채널 1% (가설) + 요양원 5% | 하드웨어 파트너 내부 산정 가정 |
 
 ## 9. 안전성 한 줄
 
@@ -99,4 +100,4 @@ WHO AI Health 6원칙 + EU AI Act + 식약처 SaMD Class 2 + 의료법 27조 준
 ### Contact
 - GitHub: [github.com/hje2555-bot/rosa-healthcare-usecase](https://github.com/hje2555-bot/rosa-healthcare-usecase)
 - Domain Lead: 황지은 (hje2555@gmail.com)
-- Upstream contribution: [nasa-jpl/rosa#82](https://github.com/nasa-jpl/rosa/pull/82)
+- Upstream 

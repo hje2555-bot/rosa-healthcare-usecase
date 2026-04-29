@@ -83,41 +83,14 @@
 
 본 시스템은 Phase 0에서는 비규제 데모지만, Phase 1 이후 **WHO 6원칙을 설계 문서에 명시 통합**할 예정.
 
-## 5-1. LG전자 ThinQ Privacy 정렬
+## 5-1. 스마트홈 프라이버시 원칙 정렬 (참고)
 
-LG ThinQ 생태계의 데이터·프라이버시 원칙과 본 시스템 설계의 정렬 항목.
+스마트홈 가전 생태계(예: ThinQ급)의 데이터·프라이버시 원칙과 본 시스템 설계의 정렬 항목 — *호환성 가정, 공식 합의 아님*.
 
-| LG ThinQ 원칙 | 본 시스템 적용 |
+| 스마트홈 프라이버시 원칙 | 본 시스템 적용 |
 |----------------|------------------|
 | Data Minimization | 6채널 센서 중 *목적별로 필요한 채널만* 활성화 (예: 인지중재 모드에서는 LiDAR 비활성) |
 | User Consent Control | 환자 + 보호자 별도 동의 모델, 가족 영상 공유 토글 분리 |
 | On-device Processing First | 다약제 모니터링의 1차 신호 처리는 디바이스 내 수행, 클라우드 전송은 가공 결과만 |
 | Auditability | 모든 알림·라우팅 결정에 rationale 로그 자동 첨부 (감사·소송 대비) |
-| Data Sovereignty | 한국 내 클라우드 (KISA CSAP 인증 사업자), 환자 데이터 국외 이전 금지 |
-
-LG가전 사업본부의 *ThinQ Care 생태계*와 본 시스템은 데이터 모델·동의 모델·감사 로그 구조를 공유하도록 설계된다.
-
-## 5-2. Upstage AI Safety 정렬
-
-Upstage Solar LLM이 의료 도메인에서 작동할 때의 안전 요건.
-
-| Upstage Safety 항목 | 본 시스템 적용 |
-|----------------------|------------------|
-| Hallucination Mitigation | 의학 NER 후처리 게이트로 약품명·용량·진단명 출력 자동 차단 |
-| Domain-specific Fine-tuning | 의료 도메인 instruction tuning (한국어 환자 자가보고 + 임상 지침서 기반) |
-| Output Filtering | 진단 표현·확정적 표현·자살관념 응답 등 3중 필터 (LLM 출력 → 임상 게이트 → 사용자) |
-| Evaluation Suite | 한국 의료법 27조 위반 케이스 1,000건 평가셋 통과 후 deploy |
-| Rollback Capability | 문제 발생 시 24시간 내 이전 모델 버전 롤백 가능 구조 |
-
-Upstage Solar의 의료 fine-tune 결과물은 본 프로젝트가 *first reference application*이 되며, 향후 LG 다른 가전 라인에 확산 가능한 안전 baseline을 제시한다.
-
-## 6. 임상시험·IRB 절차 (Phase 2 진입 시)
-
-- 첫 환자 파일럿: **연구목적 IRB 승인** 필수 (소속 연구병원 또는 대학병원)
-- 동의서: 환자 + 보호자 동시 서명, AI 시스템 한계 명시
-- 데이터 모니터링 위원회(DMC) 구성
-- 사전등록(Clinical Research Information Service, CRIS)
-
-## 7. 결론
-
-ROSA-Healthcare의 안전성 설계는 *"AI가 무엇을 할 수 있는가"* 가 아니라 *"무엇을 하지 않을 것인가"* 의 정의가 더 중요하다. 의료법·개인정보보호법·SaMD 규정의 가드레일을 설계 단계부터 내장하고, 자기반성 학습 계층에서도 *완전 자동화된 자기 수정을 금지* 하는 것이 본 시스템의 안전 철학이다.
+| Data Sovereignty | 한국 내 클라�
