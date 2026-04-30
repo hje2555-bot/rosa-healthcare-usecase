@@ -1,5 +1,13 @@
 # 삼온 케어 로봇 (Samon Care Robot) — Healthcare Domain Exploration
 
+[![License: Apache 2.0](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
+[![Built on NASA-JPL ROSA](https://img.shields.io/badge/Built%20on-NASA--JPL%20ROSA-orange.svg)](https://github.com/nasa-jpl/rosa)
+[![Status: Concept Exploration](https://img.shields.io/badge/Status-Concept%20Exploration-yellow.svg)](#-disclaimer-먼저-읽어주세요)
+[![ROSA 5-Layer Mapped](https://img.shields.io/badge/ROSA-5--Layer%20Mapped-purple.svg)](docs/01-architecture-mapping.md)
+[![Memory Workflow](https://img.shields.io/badge/Workflow-5--Step%20Memory%20Generation-green.svg)](docs/06-memory-generation-workflow.md)
+[![Domain](https://img.shields.io/badge/Domain-Elderly%20Home%20Care-red.svg)](docs/00-executive-summary.md)
+[![Upstream PR](https://img.shields.io/badge/Upstream%20PR-nasa--jpl%2Frosa%2382-lightgrey.svg)](https://github.com/nasa-jpl/rosa/pull/82)
+
 > *Personal domain-extension exploration. Concept proposal, not an official deliverable.*
 
 > NASA-JPL ROSA의 5계층 아키텍처를 가정 돌봄 도메인에 적용한 **개념 단계의 use case 탐구**.
